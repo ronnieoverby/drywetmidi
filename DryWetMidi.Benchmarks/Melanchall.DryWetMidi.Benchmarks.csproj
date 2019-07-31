@@ -173,9 +173,9 @@
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.2.6.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DryWetMidi\Melanchall.DryWetMidi.csproj">
+    <ProjectReference Include="..\DryWetMidi.Core\Melanchall.DryWetMidi.Core.csproj">
       <Project>{499fdd77-17e3-4249-aae5-50941a47d35e}</Project>
-      <Name>Melanchall.DryWetMidi</Name>
+      <Name>Melanchall.DryWetMidi.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

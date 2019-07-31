@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DryWetMIDI")]
+[assembly: AssemblyTitle("DryWetMidi.Core")]
 [assembly: AssemblyDescription(".NET library to work with MIDI files and MIDI devices")]
 [assembly: AssemblyProduct("DryWetMIDI")]
 [assembly: AssemblyCopyright("Copyright © Melanchall 2019")]
@@ -18,7 +18,9 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("499fdd77-17e3-4249-aae5-50941a47d35e")]
 
-[assembly: InternalsVisibleTo("Melanchall.DryWetMidi.Tests")]
+[assembly: InternalsVisibleTo("Melanchall.DryWetMidi.Core.Tests")]
+[assembly: InternalsVisibleTo("Melanchall.DryWetMidi.Devices.Tests")]
+[assembly: InternalsVisibleTo("Melanchall.DryWetMidi.Devices")]
 
 // Version information for an assembly consists of the following four values:
 //

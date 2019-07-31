@@ -7,8 +7,8 @@
     <ProjectGuid>{499FDD77-17E3-4249-AAE5-50941A47D35E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Melanchall.DryWetMidi</RootNamespace>
-    <AssemblyName>Melanchall.DryWetMidi</AssemblyName>
+    <RootNamespace>Melanchall.DryWetMidi.Core</RootNamespace>
+    <AssemblyName>Melanchall.DryWetMidi.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Debug\Melanchall.DryWetMidi.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\Melanchall.DryWetMidi.Core.xml</DocumentationFile>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -31,7 +31,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\Release\Melanchall.DryWetMidi.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\Melanchall.DryWetMidi.Core.xml</DocumentationFile>
     <LangVersion>6</LangVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -48,42 +48,6 @@
     <Compile Include="Common\Parsing\ParsingUtilities.cs" />
     <Compile Include="Common\ReflectionUtilities.cs" />
     <Compile Include="Common\ThrowIfArgument.cs" />
-    <Compile Include="Devices\Clock\MidiClock.cs" />
-    <Compile Include="Devices\Clock\MidiTimerWinApi.cs" />
-    <Compile Include="Devices\Clock\TickEventArgs.cs" />
-    <Compile Include="Devices\DevicesConnector\DevicesConnector.cs" />
-    <Compile Include="Devices\DevicesConnector\DevicesConnectorUtilities.cs" />
-    <Compile Include="Devices\ErrorOccurredEventArgs.cs" />
-    <Compile Include="Devices\InputDevice\InvalidShortEventReceivedEventArgs.cs" />
-    <Compile Include="Devices\InputDevice\InvalidSysExEventReceivedEventArgs.cs" />
-    <Compile Include="Devices\InputDevice\MidiEventReceivedEventArgs.cs" />
-    <Compile Include="Devices\InputDevice\InputDevice.cs" />
-    <Compile Include="Devices\InputDevice\MidiTimeCodeReceivedEventArgs.cs" />
-    <Compile Include="Devices\Manufacturer.cs" />
-    <Compile Include="Devices\MidiDevice.cs" />
-    <Compile Include="Devices\MidiDeviceException.cs" />
-    <Compile Include="Devices\OutputDevice\MidiEventSentEventArgs.cs" />
-    <Compile Include="Devices\OutputDevice\OutputDevice.cs" />
-    <Compile Include="Devices\OutputDevice\OutputDeviceType.cs" />
-    <Compile Include="Devices\OutputDevice\Volume.cs" />
-    <Compile Include="Devices\Playback\NotesEventArgs.cs" />
-    <Compile Include="Devices\Playback\Playback.cs" />
-    <Compile Include="Devices\Playback\PlaybackEvent.cs" />
-    <Compile Include="Devices\Playback\PlaybackEventCallback.cs" />
-    <Compile Include="Devices\Playback\PlaybackEventMetadata\NotePlaybackEventMetadata.cs" />
-    <Compile Include="Devices\Playback\PlaybackEventMetadata\PlaybackEventMetadata.cs" />
-    <Compile Include="Devices\Playback\PlaybackEventsComparer.cs" />
-    <Compile Include="Devices\Playback\PlaybackUtilities.cs" />
-    <Compile Include="Devices\Playback\Snapping\PlaybackSnapping.cs" />
-    <Compile Include="Devices\Playback\Snapping\SnapPoint.cs" />
-    <Compile Include="Devices\Playback\Snapping\SnapPointsGroup.cs" />
-    <Compile Include="Devices\Recording\Recording.cs" />
-    <Compile Include="Devices\Recording\RecordingEvent.cs" />
-    <Compile Include="Devices\Recording\RecordingUtilities.cs" />
-    <Compile Include="Devices\WinApi\MidiMessage.cs" />
-    <Compile Include="Devices\InputDevice\MidiInWinApi.cs" />
-    <Compile Include="Devices\WinApi\MidiWinApi.cs" />
-    <Compile Include="Devices\OutputDevice\MidiOutWinApi.cs" />
     <Compile Include="MusicTheory\Interval\IntervalParser.cs" />
     <Compile Include="MusicTheory\Interval\IntervalUtilities.cs" />
     <Compile Include="MusicTheory\Notes.cs" />

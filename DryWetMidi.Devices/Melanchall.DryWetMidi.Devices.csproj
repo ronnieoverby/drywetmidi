@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2573A65B-7C8C-458C-8E44-EEE79235CAAB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Melanchall.DryWetMidi.Devices</RootNamespace>
+    <AssemblyName>Melanchall.DryWetMidi.Devices</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Melanchall.DryWetMidi.Devices.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clock\MidiClock.cs" />
+    <Compile Include="Clock\MidiTimerWinApi.cs" />
+    <Compile Include="Clock\TickEventArgs.cs" />
+    <Compile Include="DevicesConnector\DevicesConnector.cs" />
+    <Compile Include="DevicesConnector\DevicesConnectorUtilities.cs" />
+    <Compile Include="ErrorOccurredEventArgs.cs" />
+    <Compile Include="InputDevice\InputDevice.cs" />
+    <Compile Include="InputDevice\InvalidShortEventReceivedEventArgs.cs" />
+    <Compile Include="InputDevice\InvalidSysExEventReceivedEventArgs.cs" />
+    <Compile Include="InputDevice\MidiEventReceivedEventArgs.cs" />
+    <Compile Include="InputDevice\MidiInWinApi.cs" />
+    <Compile Include="InputDevice\MidiTimeCodeReceivedEventArgs.cs" />
+    <Compile Include="Manufacturer.cs" />
+    <Compile Include="MidiDevice.cs" />
+    <Compile Include="MidiDeviceException.cs" />
+    <Compile Include="OutputDevice\MidiEventSentEventArgs.cs" />
+    <Compile Include="OutputDevice\MidiOutWinApi.cs" />
+    <Compile Include="OutputDevice\OutputDevice.cs" />
+    <Compile Include="OutputDevice\OutputDeviceType.cs" />
+    <Compile Include="OutputDevice\Volume.cs" />
+    <Compile Include="Playback\NotesEventArgs.cs" />
+    <Compile Include="Playback\Playback.cs" />
+    <Compile Include="Playback\PlaybackEvent.cs" />
+    <Compile Include="Playback\PlaybackEventCallback.cs" />
+    <Compile Include="Playback\PlaybackEventMetadata\NotePlaybackEventMetadata.cs" />
+    <Compile Include="Playback\PlaybackEventMetadata\PlaybackEventMetadata.cs" />
+    <Compile Include="Playback\PlaybackEventsComparer.cs" />
+    <Compile Include="Playback\PlaybackUtilities.cs" />
+    <Compile Include="Playback\Snapping\PlaybackSnapping.cs" />
+    <Compile Include="Playback\Snapping\SnapPoint.cs" />
+    <Compile Include="Playback\Snapping\SnapPointsGroup.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recording\Recording.cs" />
+    <Compile Include="Recording\RecordingEvent.cs" />
+    <Compile Include="Recording\RecordingUtilities.cs" />
+    <Compile Include="WinApi\MidiMessage.cs" />
+    <Compile Include="WinApi\MidiWinApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DryWetMidi.Core\Melanchall.DryWetMidi.Core.csproj">
+      <Project>{499fdd77-17e3-4249-aae5-50941a47d35e}</Project>
+      <Name>Melanchall.DryWetMidi.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

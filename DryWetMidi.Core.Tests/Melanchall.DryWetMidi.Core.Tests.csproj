@@ -8,8 +8,8 @@
     <ProjectGuid>{59309BC6-E1C3-40E8-AC58-C3793A5988B8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Melanchall.DryWetMidi.Tests</RootNamespace>
-    <AssemblyName>Melanchall.DryWetMidi.Tests</AssemblyName>
+    <RootNamespace>Melanchall.DryWetMidi.Core.Tests</RootNamespace>
+    <AssemblyName>Melanchall.DryWetMidi.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -48,18 +48,6 @@
   <ItemGroup>
     <Compile Include="Common\DataTypes\FourBitNumberTests.cs" />
     <Compile Include="Common\DataTypes\SevenBitNumberTests.cs" />
-    <Compile Include="Devices\DevicesConnector\DevicesConnectorTests.cs" />
-    <Compile Include="Devices\InpurDevice\InputDeviceTests.cs" />
-    <Compile Include="Devices\OutputDevice\OutputDeviceTests.cs" />
-    <Compile Include="Devices\Playback\PlaybackUtilitiesTests.cs" />
-    <Compile Include="Devices\Playback\PlaybackTests.cs" />
-    <Compile Include="Devices\Recording\RecordingTests.cs" />
-    <Compile Include="Devices\SendReceiveTests.cs" />
-    <Compile Include="Devices\Utilities\EventToSend.cs" />
-    <Compile Include="Devices\Utilities\MidiDevicesNames.cs" />
-    <Compile Include="Devices\Utilities\ReceivedEvent.cs" />
-    <Compile Include="Devices\Utilities\SendReceiveUtilities.cs" />
-    <Compile Include="Devices\Utilities\SentEvent.cs" />
     <Compile Include="Smf.Interaction\Chords\ChordsManagingUtilitiesTests.cs" />
     <Compile Include="Smf.Interaction\Notes\NotesManagingUtilitiesTests.cs" />
     <Compile Include="Smf.Interaction\TimedEvents\TimedEventsManagingUtilitiesTests.cs" />
@@ -123,13 +111,13 @@
     <Compile Include="Utilities\TestFilesProvider.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DryWetMidi\Melanchall.DryWetMidi.csproj">
-      <Project>{499fdd77-17e3-4249-aae5-50941a47d35e}</Project>
-      <Name>Melanchall.DryWetMidi</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <ProjectReference Include="..\DryWetMidi.Core\Melanchall.DryWetMidi.Core.csproj">
+      <Project>{499fdd77-17e3-4249-aae5-50941a47d35e}</Project>
+      <Name>Melanchall.DryWetMidi.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
