@@ -3,6 +3,7 @@ solution: Melanchall.DryWetMidi.sln
 mono: none
 dotnet: 2.2.401
 os: osx
-script:
+before_script:
   - dotnet restore
-  - dotnet test
+script:
+  - dotnet test ./DryWetMidi.Tests -c Release -f netcoreapp2.2
