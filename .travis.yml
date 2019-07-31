@@ -1,7 +1,7 @@
 language: csharp
 solution: Melanchall.DryWetMidi.sln
 mono: none
-dotnet: 2.2.6
+dotnet: 2.2.401
 os: osx
 script:
   - dotnet restore
